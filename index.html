@@ -15,7 +15,7 @@
     <div class="wrapper">
       <div class="tabs">
         <nav>
-          <a id="group-one">Group 1</a>
+          <a class="focus" id="group-one">Group 1</a>
           <a href="#tab2" id="group-two">Group 2</a>
           <a href="#tab3" id="group-three">Group 3</a>
         </nav>
@@ -34,6 +34,15 @@
     </div>
   </div>
   <script src="assets/js/app.js"></script>
+  <script>
+    document.querySelectorAll('nav a').forEach((a) => {
+      a.addEventListener('click', () => {
+        let f = a.parentNode.querySelector('a.focus');
+        if (f) f.classList.remove('focus');
+        a.classList.add('focus');
+      })
+    })
+  </script>
 </body>
 
 </html>

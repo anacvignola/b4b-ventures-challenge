@@ -9,10 +9,7 @@ body {
   font-family: "Roboto", "Helvetica Neue", "Helvetica", sans-serif;
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
-  display: flex;
   background-color: #ffffff;
-  width: 100vh;
-  height: 100vh;
 }
 
 input,
@@ -41,11 +38,13 @@ li {
 }
 
 .content {
+  margin: auto;
   display: flex;
   flex-direction: column;
   padding: 2rem;
-  margin: 0 auto;
-  width: 100%;
+  align-items: center;
+  width: 100vh;
+  height: 100vh;
 }
 
 h1 {
@@ -61,29 +60,39 @@ h1 {
   flex-direction: column;
   max-width: 600px;
   width: 100%;
-  max-height: 500px;
+  max-height: 400px;
   height: 100%;
   border-radius: 1rem;
 }
 
 nav {
-  border-radius: 1rem 1rem 0 0;
   display: flex;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 0;
-  border: 2px solid #ffffff;
 }
 
 a {
-  border-left: 2px solid #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 1rem 1rem 0 0;
+  padding: 0.5rem 0;
   justify-content: center;
   align-items: center;
   display: flex;
   width: 100%;
-  color: #fff;
   font-weight: 700;
+  color: #333;
+  background: #fff;
+}
+
+nav a:hover {
+  color: #fff;
+  background: #cccccc;
+}
+nav a.focus,
+a:focus {
+  color: #fff;
+  background: #cccccc;
 }
 
 .tab {
